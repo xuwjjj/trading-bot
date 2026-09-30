@@ -1,36 +1,64 @@
-# Trading Bot
+# روبوت التداول
 
-A Telegram trading bot built with Python for market monitoring, AI-assisted analysis, and trade execution workflows.
+روب تليغرام للتداول يعمل باستخدام Python، ويجمع بين مراقبة السوق، تحليل البيانات، ودعم الذكاء الاصطناعي لتسهيل اتخاذ قرارات التداول.
 
-## Setup
+## الهدف
 
-1. Copy `.env.example` to `.env`.
-2. Fill in your real tokens and API keys locally.
-3. Install dependencies:
+هذا المشروع مصمم لتطوير روبوت تداول ذكي يساعد في:
+
+- مراقبة السوق والرموز المالية
+- تحليل الأسعار والمؤشرات
+- إدارة المخاطر
+- تنبيه المستخدم عبر تيليجرام
+- دعم عمليات التداول بنمط paper trading قبل التشغيل الحقيقي
+
+## المتطلبات
+
+- Python 3.10 أو أعلى
+- مكتبات المشروع من ملف `requirements.txt`
+- حساب تيليجرام مع توكن البوت
+- مفاتيح API من مزود البيانات أو المنصات المستخدمة
+
+## التثبيت
+
+1. انسخ الملف `.env.example` إلى `.env`
+2. قم بتعبئة القيم الحقيقية محليًا
+3. ثبّت الحزم:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Run the bot:
+4. شغّل البوت:
 
 ```bash
 python -m bot.main
 ```
 
-## Security
+## الأمان
 
-This repository intentionally ignores local secrets:
+هذا المشروع يتجاهل القيم الحساسة محليًا، ومن ضمنها:
 
 - `.env`
-- `.env.*` (except `.env.example`)
+- `.env.*` باستثناء `.env.example`
 - `.venv/`
-- generated data and logs
+- ملفات السجلات والبيانات المولدة
 
-Do not commit real credentials. Keep them in your local `.env` file only.
+لا تضع التوكنات أو مفاتيح API داخل الريبو. استخدم ملف `.env` فقط على جهازك المحلي.
 
-## Docker
+## التشغيل عبر Docker
 
 ```bash
 docker-compose up --build
 ```
+
+## ملاحظات مهمة
+
+- تم تصميم المشروع لبيئة آمنة للتجربة والاختبار.
+- يتم استخدام الوضع الورقي في التداول قبل التشغيل الحقيقي.
+- إذا أردت التشغيل الفعلي، يجب تحديث إعدادات الأمان والـ API بشكل صحيح.
+
+## الرابط
+
+- الريبو الرئيسي: https://github.com/xuwjjj/trading-bot
+
